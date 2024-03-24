@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font 1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap"
+        rel="stylesheet">
+    <!-- font 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
+    <!-- Font 3 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js">
+        gsap.from(".navbar", { duration: 2.5, y: -50, opacity: 0, ease: "power4.out" });
+
+        gsap.from(".car-section", { duration: 2, opacity: 0, y: -50, stagger: 0.5, ease: "power4.out" });
+
+        gsap.from(".parallax-container", { duration: 2, opacity: 0, y: 50, ease: "power4.out", delay: 0.5 });
+
+        gsap.from(".about-me-container", { duration: 2, opacity: 0, y: 50, ease: "power4.out", delay: 0.5 });
+
+        gsap.from(".contacts-section", { duration: 2, opacity: 0, y: 50, ease: "power4.out", delay: 0.5 });
+
+        gsap.from(".footer", { duration: 2, opacity: 0, y: 50, ease: "power4.out", delay: 0.5 });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <title>Infinite Programmer - Car's Landing Page</title>
+</head>
+
+<body>
+    <div class="navbar" id="navbar">
+        <div class="navbar-brand">MErIN</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#models">Models</a></li>
+            <li><a href="#prices">Prices</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." id="searchInput">
+            <button type="submit" id="searchButton">Search</button>
+        </div>
+    </div>
+
+    <div class="car-section">
+        <div class="content-container">
+            <img src="/Images/car.jpg" alt="Car Image" class="car-image">
+            <div class="car-details">
+                <h2>MerIN</h2>
+                <p>MerIN Company has been revolutionizing the automotive industry with its innovative approach to car
+                    manufacturing. With a legacy spanning decades, MerIN has consistently delivered vehicles that blend
+                    cutting-edge technology with timeless design, setting new standards for performance, safety, and
+                    sustainability</p>
+                <div class="btns">
+                    <button class="order-button">Order Now</button>
+                    <button class="test-drive-button">Test Drive</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [products] -->
+    <div class="parallax-container">
+        <div class="parallax-bg"></div>
+        <div class="heading">
+            <div class="line"></div>
+            <h2>Our Products</h2>
+            <div class="line"></div>
+        </div>
+        <div class="products">
+            <div class="product-card">
+                <img src="/Images/ferrari Sp8.avif" alt="Ferrari Car">
+                <div class="product-details">
+                    <h3>Ferrari SP8</h3>
+                    <p>Price: $969,999</p>
+                    <button class="purchase-button">Purchase</button>
+                </div>
+                <!-- Ferrari Which i cant Afford -->
+            </div>
+            <div class="product-card">
+                <img src="/Images/BUgatti W16 mistral.webp" alt="Bugatti Car">
+                <div class="product-details">
+                    <h3>Bugatti W16 Mistral</h3>
+                    <p>Price: $950,000</p>
+                    <button class="purchase-button">Purchase</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/Images/Lamborgini Huracan.jpg" alt="Lamborghini">
+                <div class="product-details">
+                    <h3>Lamborghini FKP 37</h3>
+                    <p>Price: $970,000</p>
+                    <button class="purchase-button">Purchase</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/Images/mercedes.jpg" alt="Car Image">
+                <div class="product-details">
+                    <h3>Mercedes Electric</h3>
+                    <p>Price: $100,000,000</p>
+                    <button class="purchase-button">Purchase</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-me-container">
+        <div class="car-image-container">
+            <img class="merIN-logo" src="/Images/Designer (5).png" alt="MerIN Logo">
+        </div>
+        <div class="about-me-content">
+            <h2>About MerIN</h2>
+            <p>Welcome to MerIN, where innovation meets excellence in the automotive world. Established with a passion
+                for crafting unparalleled driving experiences, MerIN has been redefining luxury and performance since
+                its inception. Led by visionary founders and a team of dedicated engineers, our commitment to pushing
+                the boundaries of automotive technology knows no bounds.</p>
+            <p>At MerIN, we believe in more than just building cars; we strive to create dreams on wheels. Every vehicle
+                that bears our emblem is a testament to precision engineering, meticulous craftsmanship, and a
+                relentless pursuit of perfection. From sleek designs to powerful engines, each MerIN car embodies the
+                spirit of automotive innovation.</p>
+            <p>Join us on this journey as we continue to shape the future of mobility. Whether you're a connoisseur of
+                fine automobiles or simply seeking an unparalleled driving experience, MerIN invites you to explore our
+                world of luxury, performance, and innovation.</p>
+            <p><em>~ Infinite Programmer</em></p>
+        </div>
+    </div>
+    <div class="contacts-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="conth">Get in Touch</h2>
+                <form action="#" method="post">
+                    <input type="text" class="name" name="name" placeholder="Your Name" required>
+                    <input type="email" class="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" class="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <input type="submit" class="sumbit" value="Send Message">
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2 class="conth">Contact Information</h2>
+                <p>Alternatively, you can reach out to us at example@example.com</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p class="contp">Karachi, sindh Nazimabad Numder 4</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p class="contp">+92 98456 87541</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p class="contp">info@merin.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="logo">MerIN</div>
+            <div class="contact-info">
+                <p>Karachi, sindh Nazimabad Numder 4</p>
+                <p>Phone: +92 98456 87541</p>
+                <p>Email: info@merin.com</p>
+            </div>
+            <div class="social-icons">
+                <a href="#" target="_blank" title="Facebook">F<i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" title="Twitter">T<i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" title="LinkedIn">L<i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" title="Instagram">I<i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 MerIN. All rights reserved.</p>
+        </footer>
+</body>
+<script>
+    gsap.from(".navbar", { duration: 2.5, y: -50, opacity: 0, ease: "power4.out" });
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".navbar", {
+        duration: 2.5,
+        y: -50,
+        opacity: 0,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".navbar",
+            start: "top center",
+            end: "bottom center",
+            scrub: true,
+            toggleActions: "play none none reverse"
+        }
+    });
+
+    gsap.from(".car-section", {
+        duration: 2,
+        opacity: 0,
+        y: -50,
+        stagger: 0.5,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: ".car-section",
+            start: "top center",
+            end: "bottom center",
+            scrub: true,
+            toggleActions: "play none none reverse"
+        }
+    });
+</script>
+
+</html>

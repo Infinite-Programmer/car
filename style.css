@@ -1,0 +1,504 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(21, 21, 22, 0.87);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    padding: 10px 30px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(189, 182, 182, 0.9);
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-left: 20px;
+    border-bottom: 4px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.navbar-brand:hover {
+    border-bottom-color: #fff;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 20px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.navbar li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.navbar li a:hover::before {
+    width: 100%;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    padding-right: 30px;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    margin-right: 8px;
+    border: none;
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+    width: 100px;
+    border-radius: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.search-container input[type="text"]::placeholder {
+    color: #ccc;
+}
+
+.search-container input[type="text"]:focus {
+    background-color: #555;
+    width: 200px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background: #0ca4b8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    /* Webkit-specific styles */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+.search-container button:hover {
+    background-color: #ff5722;
+    transform: scale(1.05);
+}
+
+/* Done With NavBar :D */
+/* Uff Main Display :<*/
+.car-section {
+    display: flex;
+}
+
+.content-container {
+    flex: 1;
+    position: relative;
+}
+
+.car-image {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.car-details {
+    position: absolute;
+    top: 40%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: left;
+    letter-spacing: 1px;
+
+}
+
+.car-details h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 5px;
+}
+
+.car-details p {
+    font-size: 30px;
+    font-family: "Petemoss", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.order-button,
+.test-drive-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #81D4FA, #2196F3, #0D47A1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+
+.btns {
+    display: flex;
+}
+
+.order-button:hover,
+.test-drive-button:hover {
+    background: linear-gradient(45deg, #0D47A1, #295680, #81D4FA);
+    transform: scale(1.05);
+}
+
+/* products */
+.parallax-container {
+    position: relative;
+    height: 600px;
+    overflow-x: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Images/temp.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Fixed background */
+    z-index: -1;
+}
+
+.heading {
+    text-align: center;
+    margin-top: 100px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.line {
+    width: 250px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 0 auto 10px;
+}
+
+.products {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    color: #333;
+    width: 250px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    backdrop-filter: blur(2px);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid rgb(151, 196, 223);
+}
+
+.product-details h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.product-details p {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.purchase-button {
+    padding: 12px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: medium;
+}
+
+.purchase-button:hover {
+    background-color: #0056b3;
+}
+
+.heading {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.parallax-container:hover .heading {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05) translateZ(50px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.product-card:not(:hover) {
+    transform: scale(1) translateZ(0);
+    z-index: 0;
+}
+
+.about-me-container {
+    background-image: url('Images/Backgorund for About.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.car-image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.merIN-logo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-me-content {
+    flex: 2;
+    padding: 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.about-me-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about-me-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about-me-content p em {
+    font-style: italic;
+    color: #c2c2c2;
+}
+
+/* Done About MerIN */
+/* ContactS :D */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #292929, #1a1a1a);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.conth {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #007bff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input.name,
+form input.subject,
+input[type="email"],
+textarea {
+    width: calc(100% - 22px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+textarea {
+    height: 150px;
+}
+
+form input.sumbit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+.footer p {
+    margin: 10px 0;
+}
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.footer .contact-info {
+    margin-top: 20px;
+}
+.footer .contact-info p {
+    margin: 5px 0;
+}
+.footer .social-icons {
+    margin-top: 20px;
+}
+.footer .social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+.footer .social-icons a:hover {
+    background-color: #0056b3;
+}
+::-webkit-scrollbar {
+    width: 8px; 
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
